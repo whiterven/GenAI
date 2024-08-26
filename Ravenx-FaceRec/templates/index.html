@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RavenX Facial Recognition Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">RavenX Facial Recognition Search</h1>
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-lg mx-auto">
+            <form id="upload-form" enctype="multipart/form-data" class="space-y-4">
+                <div class="file-upload">
+                    <label class="block text-sm font-medium text-gray-700">Upload Image</label>
+                    <input type="file" id="image-upload" accept="image/*" class="input-file">
+                </div>
+                <div class="photo-capture">
+                    <label class="block text-sm font-medium text-gray-700">Or Take a Photo</label>
+                    <video id="video" class="video-feed"></video>
+                    <button type="button" id="capture" class="btn-capture">Capture Photo</button>
+                    <canvas id="canvas" class="canvas"></canvas>
+                </div>
+                <div class="submit-section">
+                    <button type="submit" class="btn-submit">Upload & Search</button>
+                </div>
+            </form>
+            <div id="loading" class="loading-section">
+                <p class="loading-text">Please wait while we search for your image...</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+            <div id="result" class="result-section">
+                <h2 class="result-title">Search Results</h2>
+                <p id="result-text" class="result-text"></p>
+                <div id="result-links" class="result-links"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
