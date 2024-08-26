@@ -1,0 +1,7 @@
+Flask
+Pillow
+opencv-python
+selenium
+beautifulsoup4
+google-generativeai
+chromedriver-binary # Or specify the correct webdriver for your browser
